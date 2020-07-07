@@ -1,14 +1,22 @@
+.elsa {background: url("/assets/images/elsa-white1.jpg");}
+.superMario {background: url("/assets/images/super-mario1.jpg");}
+.vamparina {background: url("/assets/images/vamparina1.jpg");}
+.starWars {background: url("/assets/images/lego-star-wars1.jpg");}
+
 .slider-container {
-    margin-top: 50px;
-    text-align: center;
+  margin-top: 50px;
+  text-align: center;
 }
 
 #table {
-    display: table;
-    border: 2px solid black;
-    margin: 0 auto;
+  display: table;
+  border: 2px solid black;
+  margin: 0 auto;
 }
 
+#imageList {
+  list-style: none;
+}
 
 /* Use 300px image size */
 .tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9, .tile10, .tile11, .tile12, .tile13, .tile14, .tile15, .tile16 {
@@ -16,7 +24,6 @@
   width: 75px;
   height: 75px;
   border: 1px solid white;
-  background: url(/assets/images/elsa-white1.jpg); 
   background-size: 300px 300px; 
   cursor: pointer;
 }
