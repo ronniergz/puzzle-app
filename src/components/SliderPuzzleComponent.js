@@ -60,31 +60,32 @@ class SliderPuzzle extends Component {
 
       console.log(`Cell ${row}-${column} Clicked!`);
 
-      if (tile!=="tile16") { 
+      if (tile!="tile16") { 
           //Check if empty to right
           if (column<4) {
-            if ( document.getElementById("cell"+row+(column+1)).className==="tile16") {
+            if ( document.getElementById("cell"+row+(column+1)).classList.contains("tile16")) {
+              console.log("made it to swap tiles!")
               this.swapTiles("cell"+row+column,"cell"+row+(column+1));
               return;
             }
           }
           //Check if empty to left
           if (column>1) {
-            if ( document.getElementById("cell"+row+(column-1)).className==="tile16") {
+            if ( document.getElementById("cell"+row+(column-1)).classList.contains("tile16")) {
               this.swapTiles("cell"+row+column,"cell"+row+(column-1));
               return;
             }
           }
             //Check if empty above
           if (row>1) {
-            if ( document.getElementById("cell"+(row-1)+column).className==="tile16") {
+            if ( document.getElementById("cell"+(row-1)+column).classList.contains("tile16")) {
               this.swapTiles("cell"+row+column,"cell"+(row-1)+column);
               return;
             }
           }
           //Check if empty below
           if (row<4) {
-            if ( document.getElementById("cell"+(row+1)+column).className==="tile16") {
+            if ( document.getElementById("cell"+(row+1)+column).classList.contains("tile16")) {
               this.swapTiles("cell"+row+column,"cell"+(row+1)+column);
               return;
             }
@@ -103,7 +104,7 @@ class SliderPuzzle extends Component {
     }
     this.setState({currentImage : newImage});
   }
-
+ 
   render() {
 
     return(
